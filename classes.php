@@ -54,23 +54,25 @@ class Massconvert{
 
 class Tempconvert {
 
-	public var $f
-	public var $c
+	public $f;
+	public $c;
 
 	public function setf($f){
-		$this-> f = $f;
+		$this->f = $f;
 	}
 
 	public function setC($c){
-		$this-> c = $c;
-	}
-
-	public function ftoc(){
-		$conv = ($f -32)*(5.0/9.0);
+		$this->c = $c;
 	}
 
 	public function ctof(){
-		$conv = (($c*(9.0/5.0))+32)
+		$conv = (($c*(9.0/5.0))+32);
+		return $conv;
+	}
+
+	public function ftoc(){
+		$conv = (($f -32)*(5.0/9.0);
+		return $conv;
 	}
 }
 

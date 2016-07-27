@@ -7,6 +7,7 @@
 
 
 <?php
+error_reporting(E_ALL);
 include("/classes.php");
 $initmass = floatval($_POST['initmass']);
 $lbstokg = floatval($_POST["lbstokg"]);
@@ -28,42 +29,52 @@ var_dump($_POST);
 
 // $massconvert new Massconvert;
 
-// if ($lbstokg != nil){
-// 	$toconvert->setlbs($initmass);
-// 	$toconvert -> tokgs();
-// 	echo $toconvert;
+// if ($lbstokg != 0){
+// 	$massconvert->setlbs($initmass);
+// 	$massconvert -> tokgs();
+// 	echo $massconvert;
 // }
-// if ($lbstostone != nil){
-// 	$toconvert->setlbs($initmass);
-// 	$toconvert -> tostone();
-// 	echo $toconvert;
+// if ($lbstostone != 0){
+// 	$massconvert->setlbs($initmass);
+// 	$massconvert -> tostone();
+// 	echo $massconvert;
 // }
-// if ($kgtostone != nil){
-// 	$toconvert->setkgs($initmass);
-// 	$toconvert -> tostone();
-// 	echo $toconvert;
+// if ($kgtostone != 0){
+// 	$massconvert->setkgs($initmass);
+// 	$massconvert -> tostone();
+// 	echo $massconvert;
 // }
-// if ($kgtolbs != nil){
-// 	$toconvert->setkg($initmass);
-// 	$toconvert -> tolbs();
-// 	echo $toconvert;
+// if ($kgtolbs != 0){
+// 	$massconvert->setkg($initmass);
+// 	$massconvert -> tolbs();
+// 	echo $massconvert;
 // }
-// if ($stonetolbs != nil){
-// 	$toconvert->setstone($initmass);
-// 	$toconvert -> tolbs();
-// 	echo $toconvert;
+// if ($stonetolbs != 0){
+// 	$massconvert->setstone($initmass);
+// 	$massconvert -> tolbs();
+// 	echo $massconvert;
 // }
-// if ($stonetokg != nil){
-// 	$toconvert->setstone($initmass);
-// 	$toconvert -> tokgs();
-// 	echo $toconvert;
+// if ($stonetokg != 0){
+// 	$massconvert->setstone($initmass);
+// 	$massconvert -> tokgs();
+// 	echo $massconvert;
 // }
 
 
-// $tempcov = new Tempconvert;
+$tempcov = new Tempconvert();
+
+// $tempcov->setF($inittemp);
+// echo $tempcov;	
+
+// if ($FtoC != 0){
+// 	$tempcov->setF($inittemp);
+// 	$tempcov->setC();
+// 	echo $tempcov;
+// }
+
 
 ?><br>
-<a href="index.php">Home</a>
+<a href="index.php">Home</a><br>
 
 
 </php>
