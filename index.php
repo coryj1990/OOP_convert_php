@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+<form method="post" action="convertpage.php">
+
+<input type="text" name="initmass" placeholder="Enter a Mass"><br>
+<input type="Submit" name = "lbstokg" value="lbs to kg">
+<input type="Submit" name = "lbstostone" value="lbs to stone">
+<input type="Submit" name = "kgtostone" value="kg to stone">
+<input type="Submit" name = "kgtolbs" value="kg to lbs">
+<input type="Submit" name = "stonetokg" value="stone to kg">
+<input type="Submit" name = "stonetolbs" value="stone to lb">
+
+</form>
+
+<form method="post" action="convertpage.php">
+
+<input type="text" name="inittemp" placeholder="Enter a Temperature"><br>
+<input type="Submit" name = "FtoC" value="Fahrenheit to Celsius">
+<input type="Submit" name = "CtoF" value="Celsius to Fahrenheit">
+
+</form>
+
+
+<form method="post" action="convertpage.php">
+
+<input type="text" name="initdist" placeholder="Enter a Distance"><br>
+<input type="Submit" name = "mitokilom" value="Miles to Kilometers">
+<input type="Submit" name = "kilomtomi" value="Kilometers to Miles">
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
