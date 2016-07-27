@@ -4,7 +4,7 @@ class Massconvert{
 
 	public $lbs;
 	public $kgs;
-	public $stone
+	public $stone;
 
 	public function setlbs($lbs){
 		$this -> initlbs = $lbs;
@@ -50,9 +50,9 @@ class Massconvert{
 		return $conv;
 		}
 	}
-}
+} 
 
-class Tempconvert {
+class Tempconvert{
 
 	public $f;
 	public $c;
@@ -70,16 +70,16 @@ class Tempconvert {
 		return $conv;
 	}
 
-	public function ftoc(){
-		$conv = (($f -32)*(5.0/9.0);
+	public function fartoc(){
+		$conv = (($f-32)*(5.0/9.0));
 		return $conv;
 	}
-}
+} 
 
 class Distconvert {
 
-	public $mi
-	public $km
+	public $mi;
+	public $km;
 
 	public function setmi($mi){
 		$this-> initmi = $mi;
@@ -94,11 +94,9 @@ class Distconvert {
 	}
 
 	public function kmtomi(){
-		$conv = ($km*(1.0/1.609))
+		$conv = ($km*(1.0/1.609));
 	}	
 
 }
 
 
-
-?>

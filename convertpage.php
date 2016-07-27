@@ -7,7 +7,7 @@
 
 
 <?php
-error_reporting(E_ALL);
+
 include("/classes.php");
 $initmass = floatval($_POST['initmass']);
 $lbstokg = floatval($_POST["lbstokg"]);
