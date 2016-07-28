@@ -8,69 +8,70 @@
 
 <?php
 
-include("/classes.php");
-$initmass = floatval($_POST['initmass']);
-$lbstokg = floatval($_POST["lbstokg"]);
-$lbstostone = floatval($_POST["lbstostone"]);
-$kgtostone = floatval($_POST["kgtostone"]);
-$kgtolbs = floatval($_POST["kgtolbs"]);
-$stonetokg = floatval($_POST["stonetokg"]);
-$stonetolbs = floatval($_POST["stone"]);
+include("classes.php");
+$initmass = $_POST['initmass'];
+$lbstokg = $_POST["lbstokg"];
+$lbstostone = $_POST["lbstostone"];
+$kgtostone = $_POST["kgtostone"];
+$kgtolbs = $_POST["kgtolbs"];
+$stonetokg = $_POST["stonetokg"];
+$stonetolbs = $_POST["stone"];
 
-$inittemp = floatval($_POST["inittemp"]);
-$FtoC = floatval($_POST["FtoC"]);
-$CtoF = floatval($_POST["CtoF"]);
+$inittemp = $_POST["inittemp"];
+$FtoC = $_POST["FtoC"];
+$CtoF = $_POST["CtoF"];
 
-$initdist = floatval($_POST["initdist"]);
-$mitokilom = floatval($_POST["mitokilom"]);
-$kilomtomi = floatval($_POST["mitokilom"]);
+$initdist = $_POST["initdist"];
+$mitokilom = $_POST["mitokilom"];
+$kilomtomi = $_POST["mitokilom"];
 
-var_dump($_POST);
+$massconvert = new Massconvert();
 
-// $massconvert new Massconvert;
-
-// if ($lbstokg != 0){
-// 	$massconvert->setlbs($initmass);
-// 	$massconvert -> tokgs();
-// 	echo $massconvert;
-// }
-// if ($lbstostone != 0){
-// 	$massconvert->setlbs($initmass);
-// 	$massconvert -> tostone();
-// 	echo $massconvert;
-// }
-// if ($kgtostone != 0){
-// 	$massconvert->setkgs($initmass);
-// 	$massconvert -> tostone();
-// 	echo $massconvert;
-// }
-// if ($kgtolbs != 0){
-// 	$massconvert->setkg($initmass);
-// 	$massconvert -> tolbs();
-// 	echo $massconvert;
-// }
-// if ($stonetolbs != 0){
-// 	$massconvert->setstone($initmass);
-// 	$massconvert -> tolbs();
-// 	echo $massconvert;
-// }
-// if ($stonetokg != 0){
-// 	$massconvert->setstone($initmass);
-// 	$massconvert -> tokgs();
-// 	echo $massconvert;
-// }
-
+if($lbstokg != ""){
+	$massconvert->setlbs($initmass);
+	echo $initmass . " lbs is equivalent to " . round(($massconvert->lbstokgs()),3) . " kgs";
+}
+if($lbstostone != ""){
+	$massconvert->setlbs($initmass);
+	echo $initmass . " lbs is equivalent to " . round(($massconvert->lbstostone()),3) . " stone";
+}
+if($kgtostone != ""){
+	$massconvert->setkgs($initmass);
+	echo $initmass . " kgs is equivalent to " . round(($massconvert->kgstostone()),3) . " stone";
+}
+if($kgtolbs != ""){
+	$massconvert->setkgs($initmass);
+	echo $initmass . " kgs is equivalent to " . round(($massconvert->kgstolbs()),3) . " lbs";
+}
+if($stonetolbs != ""){
+	$massconvert->setstone($initmass);
+	echo $initmass . " stone is equivalent to " . round(($massconvert->stonetolbs()),3) . " lbs";
+}
+if($stonetokg != ""){
+	$massconvert->setstone($initmass);
+	echo $initmass . " stone is equivalent to " . round(($massconvert->stonetokgs()),3) . " kgs";
+}
 
 $tempcov = new Tempconvert();
+if($FtoC != ""){
+	$tempcov->setF($inittemp);
+	echo $inittemp . " fahrenheit is equivalent to " . round(($tempcov->ftoc()), 3) . " celsius";
+}
+if($CtoF != ""){
+	$tempcov->setC($inittemp);
+	echo $inittemp . " celsius is equivalent to " . round(($tempcov->ctof()), 3) . " fahrenheit";
+}
 
-// $tempcov->setF($inittemp);
-// echo $tempcov;	
 
-// if ($FtoC != 0){
-// 	$tempcov->setF($inittemp);
-// 	$tempcov->setC();
-// 	echo $tempcov;
-// }
+$distcov = new Distconvert();
+if($mitokilom != ""){
+	$distcov->setmi($initdist);
+	echo $initdist . " miles is equivalent to " . round(($distcov->mitokm()), 3) . " kilometers";
+}
+if($kilomtomi != ""){
+	$distcov->setkm($initdist);
+	echo $initdist . " kilometers is equivalent to " . round(($distcov->kmtomi()), 3) . " miles";
+}
 
 
 ?><br>

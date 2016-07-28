@@ -2,62 +2,54 @@
 
 class Massconvert{
 
-	public $lbs;
-	public $kgs;
-	public $stone;
-
 	public function setlbs($lbs){
-		$this -> initlbs = $lbs;
+		$this->initlbs = $lbs;
 	}
 
 	public function setkgs($kgs){
-		$this -> initkgs = $kgs;
+		$this->initkgs = $kgs;
 	}
 
 	public function setstone($stone){
-		$this -> initstone = $stone;
+		$this->initstone = $stone;
 	}
 
-	public function tokgs(){
-	if ($lbs != nil) {
-		$conv = $lbs*0.4536;
-		return $conv;
-		}
-	elseif ($stone != nil) {
-		$conv = $stone *(0.4536/0.07143);
-		return $conv;
-		}
+	public function lbstokgs(){
+		$this->conv = ($this->initlbs)*(0.4536);
+		return $this ->conv;
 	}
 
-	public function tolbs(){
-	if ($kgs != nil) {
-		$conv = $kgs*(1.0/0.4536);
-		return $conv;
-		}
-	elseif ($stone != nil) {
-		$conv = $stone*(1.0/0.07143);
-		return $conv;
-		}
+	public function stonetokgs(){
+		$this->conv = ($this->initstone)*(0.4536/0.07143);
+		return $this ->conv;
 	}
 
-	public function tostone(){
-	if ($lbs != nil) {
-		$conv = $lbs*0.07143;
-		return $conv;
-		}
-	elseif ($kgs != nil) {
-		$conv = $kgs*(0.07143/0.4536);
-		return $conv;
-		}
+	public function kgstolbs(){
+		$this->conv = ($this->initkgs)*(1.0/0.4536);
+		return $this ->conv;
+	}
+
+	public function stonetolbs(){
+		$this->conv = ($this->initstone)*(1.0/0.07143);
+		return $this ->conv;
+	}
+
+	public function lbstostone(){
+		$this->conv = ($this->initlbs)*(0.07143);
+		return $this ->conv;
+	}
+
+	public function kgstostone(){
+		$this->conv = ($this->initkgs)*(0.07143/0.4536);
+		return $this ->conv;
 	}
 } 
 
+
+
 class Tempconvert{
 
-	public $f;
-	public $c;
-
-	public function setf($f){
+	public function setF($f){
 		$this->f = $f;
 	}
 
@@ -66,37 +58,37 @@ class Tempconvert{
 	}
 
 	public function ctof(){
-		$conv = (($c*(9.0/5.0))+32);
-		return $conv;
+		$this ->conv = ((($this ->c)*(9.0/5.0))+32);
+		return $this ->conv;
 	}
 
-	public function fartoc(){
-		$conv = (($f-32)*(5.0/9.0));
-		return $conv;
+	public function ftoc(){
+		$this ->conv = (($this ->f) - 32)*(5.0/9.0);
+		return $this ->conv;
 	}
 } 
 
 class Distconvert {
 
-	public $mi;
-	public $km;
-
 	public function setmi($mi){
-		$this-> initmi = $mi;
+		$this ->initmi = $mi;
 	}
 
 	public function setkm($km){
-		$this-> initkm = $km;
+		$this ->initkm = $km;
 	}
 
 	public function mitokm(){
-		$conv = $mi*1.609;
+		$this ->conv = ($this ->initmi)*(1.609);
+		return $this ->conv;
 	}
 
 	public function kmtomi(){
-		$conv = ($km*(1.0/1.609));
+		$this ->conv = ($this ->initkm)*(1.0/1.609);
+		return $this ->conv;
 	}	
 
 }
 
 
+?>
